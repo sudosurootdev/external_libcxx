@@ -3654,7 +3654,7 @@ private:
 };
 
 #ifndef _LIBCPP_NO_RTTI
-
+#include <typeinfo>
 template <class _Tp, class _Dp, class _Alloc>
 const void*
 __shared_ptr_pointer<_Tp, _Dp, _Alloc>::__get_deleter(const type_info& __t) const _NOEXCEPT
@@ -3936,6 +3936,7 @@ public:
         {return __cntrl_ == __p.__cntrl_;}
 
 #ifndef _LIBCPP_NO_RTTI
+#include <typeinfo>
     template <class _Dp>
         _LIBCPP_INLINE_VISIBILITY
         _Dp* __get_deleter() const _NOEXCEPT
